@@ -4,46 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="kostur dodat">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/MessageBroker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ActivationNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ReminderNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ReservationNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ResetNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ActivationNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/NotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ReminderNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ReservationNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ResetNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ActivationNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/NotificationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReminderNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReservationNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ResetNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ActivationNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ReminderNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ReservationNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ResetNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/NotificationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ReminderNotifServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ResetNotifServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SK_2proj_notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SK_2proj_notification_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_7_0_1_Final.xml" afterDir="false" />
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="repo napravljen">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/NotificationCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/NotificationDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641943141376</updated>
       <workItem from="1641943142751" duration="81000" />
-      <workItem from="1641982608704" duration="5050000" />
+      <workItem from="1641982608704" duration="5867000" />
     </task>
     <task id="LOCAL-00001" summary="maven dep added">
       <created>1641983416486</created>
@@ -150,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1641983781023</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="baza za rad">
+      <created>1641993436229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641993436229</updated>
+    </task>
+    <task id="LOCAL-00005" summary="repo napravljen">
+      <created>1641993713886</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1641993713886</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +150,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="maven dep added" />
     <MESSAGE value="kostur dodat" />
-    <option name="LAST_COMMIT_MESSAGE" value="kostur dodat" />
+    <MESSAGE value="baza za rad" />
+    <MESSAGE value="repo napravljen" />
+    <option name="LAST_COMMIT_MESSAGE" value="repo napravljen" />
   </component>
 </project>
