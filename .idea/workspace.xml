@@ -5,7 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="swagger minimalno promenjen">
+      <change afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db-1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/db.redo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activemq-data/localhost/KahaDB/lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/MessageBroker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/MessageBroker_old.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_83.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webflux_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webmvc_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_el_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_1_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/ActivationNotifService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/ActivationNotifService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/runner/TestDataRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/runner/TestDataRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +110,7 @@
       <recent name="C:\Users\Shus\Programing\IdeaProjects\Year 3\SK-projekat2\SK_2proj_notification_service\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app" />
       <recent name="app.service.impl" />
       <recent name="app.service" />
       <recent name="app.repository" />
@@ -93,7 +124,33 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HotelNotificationServiceApp (1)">
+  <component name="RunManager" selected="Application.MessageBroker">
+    <configuration name="MessageBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.MessageBroker" />
+      <module name="notification_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageBroker_old" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.MessageBroker_old" />
+      <module name="notification_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HotelNotificationServiceApp (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="notification_service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.HotelNotificationServiceApp" />
@@ -108,6 +165,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MessageBroker" />
+        <item itemvalue="Application.MessageBroker_old" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,6 +186,7 @@
       <workItem from="1641998636361" duration="115000" />
       <workItem from="1641998777910" duration="7678000" />
       <workItem from="1642018196313" duration="2800000" />
+      <workItem from="1642026575572" duration="4254000" />
     </task>
     <task id="LOCAL-00001" summary="maven dep added">
       <created>1641983416486</created>
@@ -229,6 +293,7 @@
       <option name="project" value="LOCAL" />
       <updated>1642007812562</updated>
     </task>
+    <option name="localTasksCounter" value="16" />
     <task id="LOCAL-00016" summary="swagger minimalno promenjen">
       <created>1642020805406</created>
       <option name="number" value="00016" />

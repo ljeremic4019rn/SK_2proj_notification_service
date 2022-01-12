@@ -29,7 +29,9 @@ public class ActivationNotifController {
 
     @PostMapping(value = "register")
     public ResponseEntity<ActivationNotifDto> add(@RequestBody @Valid ActivationNotifCreateDto activationNotifCreateDto){
-        return new ResponseEntity<>(activationNotifService.add(activationNotifCreateDto), HttpStatus.CREATED);
+//        return new ResponseEntity<>(activationNotifService.add(activationNotifCreateDto), HttpStatus.CREATED);
+        activationNotifService.add(activationNotifCreateDto);
+        return null;
     }
 
     @GetMapping("/{id}")
