@@ -7,6 +7,7 @@ import app.dto.ResetNotifCreateDto;
 import app.dto.ResetNotifDto;
 import app.exception.NotFoundException;
 import app.repository.NotificationRepository;
+import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,10 +15,12 @@ public class ResetNotifMapper {
 
     private NotificationMapper notificationMapper;
     private NotificationRepository notificationRepository;
+    private NotificationTypeRepository notificationTypeRepository;
 
-    public ResetNotifMapper(NotificationMapper notificationMapper, NotificationRepository notificationRepository) {
+    public ResetNotifMapper(NotificationMapper notificationMapper, NotificationRepository notificationRepository, NotificationTypeRepository notificationTypeRepository) {
         this.notificationMapper = notificationMapper;
         this.notificationRepository = notificationRepository;
+        this.notificationTypeRepository = notificationTypeRepository;
     }
 
     public ResetNotifDto resetNotifToResetNotifDto(ResetNotif resetNotif){
@@ -33,7 +36,9 @@ public class ResetNotifMapper {
         Notification notification = new Notification();
         notification.setClientEmail(resetNotifCreateDto.getClientEmail());
         notification.setText(resetNotifCreateDto.getText());
-        notification.setType(resetNotifCreateDto.getType());
+        notification.setNotificationType(notificationTypeRepository.findByName(resetNotifCreateDto.getType())
+                .orElseThrow(() -> new NotFoundException(String
+                        .format("NotificationType with name: %s does not exists.", resetNotifCreateDto.getType()))));
         notification.setCreationDate(resetNotifCreateDto.getCreationDate());
         notificationRepository.save(notification);
 

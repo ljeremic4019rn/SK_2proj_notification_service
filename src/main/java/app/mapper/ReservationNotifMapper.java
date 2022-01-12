@@ -6,6 +6,7 @@ import app.dto.ReservationNotifCreateDto;
 import app.dto.ReservationNotifDto;
 import app.exception.NotFoundException;
 import app.repository.NotificationRepository;
+import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,10 +14,12 @@ public class ReservationNotifMapper {
 
     private NotificationMapper notificationMapper;
     private NotificationRepository notificationRepository;
+    private NotificationTypeRepository notificationTypeRepository;
 
-    public ReservationNotifMapper(NotificationMapper notificationMapper, NotificationRepository notificationRepository) {
+    public ReservationNotifMapper(NotificationMapper notificationMapper, NotificationRepository notificationRepository, NotificationTypeRepository notificationTypeRepository) {
         this.notificationMapper = notificationMapper;
         this.notificationRepository = notificationRepository;
+        this.notificationTypeRepository = notificationTypeRepository;
     }
 
     public ReservationNotifDto reservationNotifToReservationNotifDto(ReservationNotif reservationNotif){
@@ -31,7 +34,9 @@ public class ReservationNotifMapper {
         Notification notification = new Notification();
         notification.setClientEmail(reservationNotifCreateDto.getClientEmail());
         notification.setText(reservationNotifCreateDto.getText());
-        notification.setType(reservationNotifCreateDto.getType());
+        notification.setNotificationType(notificationTypeRepository.findByName(reservationNotifCreateDto.getType())
+                .orElseThrow(() -> new NotFoundException(String
+                        .format("NotificationType with name: %s does not exists.", reservationNotifCreateDto.getType()))));
         notification.setCreationDate(reservationNotifCreateDto.getCreationDate());
         notificationRepository.save(notification);
 

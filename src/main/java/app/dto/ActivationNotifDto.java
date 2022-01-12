@@ -8,6 +8,7 @@ public class ActivationNotifDto {
     @JsonProperty("notification")
     private NotificationDto notificationDto;
 
+
     public Long getId() {
         return id;
     }

@@ -4,7 +4,9 @@ import app.domain.Notification;
 import app.domain.ReminderNotif;
 import app.dto.ReminderNotifCreateDto;
 import app.dto.ReminderNotifDto;
+import app.exception.NotFoundException;
 import app.repository.NotificationRepository;
+import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,6 +14,13 @@ public class ReminderNotifMapper {
 
     private NotificationMapper notificationMapper;
     private NotificationRepository notificationRepository;
+    private NotificationTypeRepository notificationTypeRepository;
+
+    public ReminderNotifMapper(NotificationMapper notificationMapper, NotificationRepository notificationRepository, NotificationTypeRepository notificationTypeRepository) {
+        this.notificationMapper = notificationMapper;
+        this.notificationRepository = notificationRepository;
+        this.notificationTypeRepository = notificationTypeRepository;
+    }
 
     public ReminderNotifDto reminderNotifToReminderNotifDto (ReminderNotif reminderNotif){
         ReminderNotifDto reminderNotifDto = new ReminderNotifDto();
@@ -26,7 +35,9 @@ public class ReminderNotifMapper {
         Notification notification = new Notification();
         notification.setClientEmail(reminderNotifCreateDto.getClientEmail());
         notification.setText(reminderNotifCreateDto.getText());
-        notification.setType(reminderNotifCreateDto.getType());
+        notification.setNotificationType(notificationTypeRepository.findByName(reminderNotifCreateDto.getType())
+                .orElseThrow(() -> new NotFoundException(String
+                        .format("NotificationType with name: %s does not exists.", reminderNotifCreateDto.getType()))));
         notification.setCreationDate(reminderNotifCreateDto.getCreationDate());
         notificationRepository.save(notification);
 

@@ -10,16 +10,18 @@ public class Notification {
     private Long id;
     private String clientEmail;
     private String text;
-    private String type;
+    @ManyToOne
+    private NotificationType notificationType;
     private Date creationDate;
 
     public Notification() {
     }
 
-    public Notification( String clientEmail, String text, String type, Date creationDate) {
+    public Notification(Long id, String clientEmail, String text, NotificationType notificationType, Date creationDate) {
+        this.id = id;
         this.clientEmail = clientEmail;
         this.text = text;
-        this.type = type;
+        this.notificationType = notificationType;
         this.creationDate = creationDate;
     }
 
@@ -47,12 +49,12 @@ public class Notification {
         this.text = text;
     }
 
-    public String getType() {
-        return type;
+    public NotificationType getNotificationType() {
+        return notificationType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setNotificationType(NotificationType notificationType) {
+        this.notificationType = notificationType;
     }
 
     public Date getCreationDate() {
