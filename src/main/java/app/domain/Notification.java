@@ -1,6 +1,7 @@
 package app.domain;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Notification {
@@ -10,14 +11,16 @@ public class Notification {
     private String clientEmail;
     private String text;
     private String type;
+    private Date creationDate;
 
     public Notification() {
     }
 
-    public Notification(String clientEmail, String text, String type) {
+    public Notification( String clientEmail, String text, String type, Date creationDate) {
         this.clientEmail = clientEmail;
         this.text = text;
         this.type = type;
+        this.creationDate = creationDate;
     }
 
     public Long getId() {
@@ -50,5 +53,13 @@ public class Notification {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 }

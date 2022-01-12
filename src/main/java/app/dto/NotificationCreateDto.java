@@ -1,6 +1,7 @@
 package app.dto;
 
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
 public class NotificationCreateDto {
     @NotBlank
@@ -9,6 +10,9 @@ public class NotificationCreateDto {
     private String text;
     @NotBlank
     private String type;
+    @NotBlank
+    private Date creationDate;
+
 
     public String getClientEmail() {
         return clientEmail;
@@ -32,5 +36,13 @@ public class NotificationCreateDto {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 }

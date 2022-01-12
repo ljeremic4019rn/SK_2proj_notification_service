@@ -1,13 +1,17 @@
 package app.domain;
 
+
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
-public class ReminderNotification {
+public class ReservationNotif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String timeUntilReservation;
+    //todo dodaj varijablu za rezervaciju
+    //todo dodatni emails za menagere
+
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 

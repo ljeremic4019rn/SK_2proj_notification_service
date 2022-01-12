@@ -1,10 +1,14 @@
 package app.dto;
 
+import java.util.Date;
+
 public class NotificationDto {
     private Long id;
     private String clientEmail;
     private String text;
     private String type;
+    private Date creationDate;
+
 
     public Long getId() {
         return id;
@@ -36,5 +40,13 @@ public class NotificationDto {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 }
