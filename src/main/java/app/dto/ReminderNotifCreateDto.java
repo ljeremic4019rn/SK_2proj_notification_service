@@ -1,10 +1,13 @@
 package app.dto;
 
+import java.util.Date;
+
 public class ReminderNotifCreateDto {
     private String timeUntilReservation;
     private String clientEmail;
     private String text;
     private String type;
+    private Date creationDate;
 
     public String getTimeUntilReservation() {
         return timeUntilReservation;
@@ -36,5 +39,13 @@ public class ReminderNotifCreateDto {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 }
