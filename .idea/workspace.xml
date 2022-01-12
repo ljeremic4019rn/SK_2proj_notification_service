@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="swagger minimalno promenjen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/runner/TestDataRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/runner/TestDataRunner.java" afterDir="false" />
     </list>
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="swagger minimalno promenjen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -230,7 +229,6 @@
       <option name="project" value="LOCAL" />
       <updated>1642007812562</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
     <task id="LOCAL-00016" summary="swagger minimalno promenjen">
       <created>1642020805406</created>
       <option name="number" value="00016" />
@@ -398,6 +396,7 @@
     <MESSAGE value="basic struktura controllera" />
     <MESSAGE value="service implementiran" />
     <MESSAGE value="swagger minimalno promenjen" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger minimalno promenjen" />
+    <MESSAGE value=".idea commit da bi se radio pull" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea commit da bi se radio pull" />
   </component>
 </project>
