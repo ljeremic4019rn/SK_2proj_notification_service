@@ -8,7 +8,6 @@ public class ActivationNotif {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String activationLink;
-
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 

@@ -1,42 +1,25 @@
-package app.domain;
+package app.dto;
 
-import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
-@Entity
-public class Notification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class NotificationCreateDto {
+    @NotBlank
     private String clientEmail;
+    @NotBlank
     private String text;
+    @NotBlank
     private String type;
+    @NotBlank
     private Date creationDate;
 
-    public Notification() {
-    }
-
-    public Notification( String clientEmail, String text, String type, Date creationDate) {
-        this.clientEmail = clientEmail;
-        this.text = text;
-        this.type = type;
-        this.creationDate = creationDate;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getClientEmail() {
         return clientEmail;
     }
 
-    public void setClientEmail(String email) {
-        this.clientEmail = email;
+    public void setClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
     }
 
     public String getText() {

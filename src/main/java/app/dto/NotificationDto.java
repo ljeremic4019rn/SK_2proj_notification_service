@@ -1,27 +1,14 @@
-package app.domain;
+package app.dto;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-public class Notification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class NotificationDto {
     private Long id;
     private String clientEmail;
     private String text;
     private String type;
     private Date creationDate;
 
-    public Notification() {
-    }
-
-    public Notification( String clientEmail, String text, String type, Date creationDate) {
-        this.clientEmail = clientEmail;
-        this.text = text;
-        this.type = type;
-        this.creationDate = creationDate;
-    }
 
     public Long getId() {
         return id;
@@ -35,8 +22,8 @@ public class Notification {
         return clientEmail;
     }
 
-    public void setClientEmail(String email) {
-        this.clientEmail = email;
+    public void setClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
     }
 
     public String getText() {
