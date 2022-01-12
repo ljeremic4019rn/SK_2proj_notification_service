@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodati notif, reminder i activation mapperi">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" afterDir="false" />
-    </list>
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="NotificationType je dodat kao i dto i mapper" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +24,7 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="JPA Structure" value="true" />
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
@@ -34,6 +32,7 @@
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
@@ -317,6 +316,7 @@
     <MESSAGE value="dodat datum u notification i preimenovane klase" />
     <MESSAGE value="random push" />
     <MESSAGE value="dodati notif, reminder i activation mapperi" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodati notif, reminder i activation mapperi" />
+    <MESSAGE value="NotificationType je dodat kao i dto i mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="NotificationType je dodat kao i dto i mapper" />
   </component>
 </project>
