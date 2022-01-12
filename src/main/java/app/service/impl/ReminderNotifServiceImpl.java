@@ -1,7 +1,9 @@
 package app.service.impl;
 
+import app.domain.ReminderNotif;
 import app.dto.ReminderNotifCreateDto;
 import app.dto.ReminderNotifDto;
+import app.exception.NotFoundException;
 import app.mapper.ReminderNotifMapper;
 import app.repository.ReminderNotifRepository;
 import app.service.ReminderNotifService;
@@ -24,21 +26,26 @@ public class ReminderNotifServiceImpl implements ReminderNotifService {
 
     @Override
     public Page<ReminderNotifDto> findAll(Pageable pageable) {
-        return null;
+        return reminderNotifRepository.findAll(pageable)
+                .map(reminderNotifMapper::reminderNotifToReminderNotifDto);
     }
 
     @Override
     public ReminderNotifDto add(ReminderNotifCreateDto reminderNotifCreateDto) {
-        return null;
+        ReminderNotif reminderNotif = reminderNotifMapper.reminderNotifCreateDtoToReminderNotif(reminderNotifCreateDto);
+        reminderNotifRepository.save(reminderNotif);
+        return reminderNotifMapper.reminderNotifToReminderNotifDto(reminderNotif);
     }
 
     @Override
     public ReminderNotifDto findById(Long id) {
-        return null;
+        return reminderNotifRepository.findById((id))
+                .map(reminderNotifMapper::reminderNotifToReminderNotifDto)
+                .orElseThrow(() -> new NotFoundException(String.format("reminderNotifRepository with id: %d not found.", id)));
     }
 
     @Override
     public void deleteById(Long id) {
-
+        reminderNotifRepository.deleteById((id));
     }
 }
