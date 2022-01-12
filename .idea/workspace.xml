@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodati notif, reminder i activation mapperi">
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodat service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/NotificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/ReminderNotifController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/ReservationNotifController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/ResetNotifController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/NotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ReminderNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ReminderNotifServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ReservationNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ReservationNotifServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ResetNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ResetNotifServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +85,21 @@
       <recent name="app.dto" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.HotelNotificationServiceApp">
+    <configuration name="HotelNotificationServiceApp (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="notification_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.HotelNotificationServiceApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HotelNotificationServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SK_2proj_notification_service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.HotelNotificationServiceApp" />
@@ -96,7 +120,7 @@
       <workItem from="1641982608704" duration="9700000" />
       <workItem from="1641998554726" duration="59000" />
       <workItem from="1641998636361" duration="115000" />
-      <workItem from="1641998777910" duration="732000" />
+      <workItem from="1641998777910" duration="5007000" />
     </task>
     <task id="LOCAL-00001" summary="maven dep added">
       <created>1641983416486</created>
@@ -168,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641998605519</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="dodat service">
+      <created>1642000022529</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642000022529</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +348,7 @@
     <MESSAGE value="dodat datum u notification i preimenovane klase" />
     <MESSAGE value="random push" />
     <MESSAGE value="dodati notif, reminder i activation mapperi" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodati notif, reminder i activation mapperi" />
+    <MESSAGE value="dodat service" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodat service" />
   </component>
 </project>
