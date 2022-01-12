@@ -15,4 +15,20 @@ public class ReservationNotif {
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Notification getNotification() {
+        return notification;
+    }
+
+    public void setNotification(Notification notification) {
+        this.notification = notification;
+    }
 }

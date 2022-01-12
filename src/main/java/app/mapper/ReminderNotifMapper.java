@@ -13,7 +13,7 @@ public class ReminderNotifMapper {
     private NotificationMapper notificationMapper;
     private NotificationRepository notificationRepository;
 
-    public ReminderNotifDto reminderNotifToreminderNotifDto (ReminderNotif reminderNotif){
+    public ReminderNotifDto reminderNotifToReminderNotifDto (ReminderNotif reminderNotif){
         ReminderNotifDto reminderNotifDto = new ReminderNotifDto();
         reminderNotifDto.setId(reminderNotif.getId());
         reminderNotifDto.setTimeUntilReservation(reminderNotif.getTimeUntilReservation());
