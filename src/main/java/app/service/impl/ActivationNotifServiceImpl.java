@@ -7,10 +7,16 @@ import app.exception.NotFoundException;
 import app.mapper.ActivationNotifMapper;
 import app.repository.ActivationNotifRepository;
 import app.service.ActivationNotifService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.validation.Valid;
 
 @Service
 @Transactional
@@ -19,7 +25,18 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
     private ActivationNotifRepository activationNotifRepository;
     private ActivationNotifMapper activationNotifMapper;
 
+    private JmsTemplate jmsTemplate;
+    private ObjectMapper objectMapper;
+    private String destinationTestMessage;
 
+    public ActivationNotifServiceImpl(ActivationNotifRepository activationNotifRepository, ActivationNotifMapper activationNotifMapper,
+                                      JmsTemplate jmsTemplate, ObjectMapper objectMapper, @Value("${destination.testMessage}") String destinationTestMessage) {
+        this.activationNotifRepository = activationNotifRepository;
+        this.activationNotifMapper = activationNotifMapper;
+        this.jmsTemplate = jmsTemplate;
+        this.objectMapper = objectMapper;
+        this.destinationTestMessage = destinationTestMessage;
+    }
 
     @Override
     public Page<ActivationNotifDto> findAll(Pageable pageable) {
@@ -28,10 +45,25 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
     }
 
     @Override
-    public ActivationNotifDto add(ActivationNotifCreateDto activationNotifCreateDto) {
-        ActivationNotif activationNotif = activationNotifMapper.activationNotifCreateDtoToActivationNotif(activationNotifCreateDto);
-        activationNotifRepository.save(activationNotif);
-        return activationNotifMapper.activationNotifToActivationNotifDto(activationNotif);
+    public void add(ActivationNotifCreateDto activationNotifCreateDto) {
+//        ActivationNotif activationNotif = activationNotifMapper.activationNotifCreateDtoToActivationNotif(activationNotifCreateDto);
+//        activationNotifRepository.save(activationNotif);
+//        return activationNotifMapper.activationNotifToActivationNotifDto(activationNotif);
+        System.out.println("saljemo poruku");
+
+
+        ActivationNotifDto activationNotifDto  = new ActivationNotifDto();
+        activationNotifDto.setActivationLink("link link");
+        activationNotifDto.setId(12L);
+        activationNotifDto.setNotificationDto(null);
+
+
+        try {
+            jmsTemplate.convertAndSend(destinationTestMessage, objectMapper.writeValueAsString(activationNotifDto));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
