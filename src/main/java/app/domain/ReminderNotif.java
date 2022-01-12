@@ -11,4 +11,27 @@ public class ReminderNotif {
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTimeUntilReservation() {
+        return timeUntilReservation;
+    }
+
+    public void setTimeUntilReservation(String timeUntilReservation) {
+        this.timeUntilReservation = timeUntilReservation;
+    }
+
+    public Notification getNotification() {
+        return notification;
+    }
+
+    public void setNotification(Notification notification) {
+        this.notification = notification;
+    }
 }
