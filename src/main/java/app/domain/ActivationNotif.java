@@ -3,12 +3,11 @@ package app.domain;
 import javax.persistence.*;
 
 @Entity
-public class ResetNotification {
+public class ActivationNotif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String newEmail;
-    private String newPassword;
+    private String activationLink;
 
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
@@ -21,20 +20,12 @@ public class ResetNotification {
         this.id = id;
     }
 
-    public String getNewEmail() {
-        return newEmail;
+    public String getActivationLink() {
+        return activationLink;
     }
 
-    public void setNewEmail(String newEmail) {
-        this.newEmail = newEmail;
-    }
-
-    public String getNewPassword() {
-        return newPassword;
-    }
-
-    public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
+    public void setActivationLink(String activationLink) {
+        this.activationLink = activationLink;
     }
 
     public Notification getNotification() {

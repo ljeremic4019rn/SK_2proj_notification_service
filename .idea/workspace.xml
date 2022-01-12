@@ -4,46 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="kostur dodat">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/MessageBroker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ActivationNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ReminderNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ReservationNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/ResetNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ActivationNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/NotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ReminderNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ReservationNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ResetNotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ActivationNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/NotificationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReminderNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReservationNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/ResetNotifRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ActivationNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ReminderNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ReservationNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/ResetNotifService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/NotificationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ReminderNotifServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ResetNotifServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SK_2proj_notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SK_2proj_notification_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_7_0_1_Final.xml" afterDir="false" />
+    <list default="true" id="c0bece60-2f46-4357-beeb-0d6158580577" name="Changes" comment="Za pull komit">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/ActivationNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/ActivationNotif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/ReminderNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/ReminderNotif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/ReservationNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/ReservationNotif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/ResetNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/ResetNotif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ActivationNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ActivationNotifRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ReminderNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReminderNotifRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ReservationNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReservationNotifRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ResetNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ResetNotifRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +45,9 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
@@ -71,6 +55,9 @@
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
@@ -97,6 +84,9 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.12330097" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -109,7 +99,14 @@
       <recent name="app.dto" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.HotelNotificationServiceApp">
+    <configuration name="HotelNotificationServiceApp (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="notification_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.HotelNotificationServiceApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HotelNotificationServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SK_2proj_notification_service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.HotelNotificationServiceApp" />
@@ -166,11 +163,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="maven dep added" />
     <MESSAGE value="kostur dodat" />
-    <option name="LAST_COMMIT_MESSAGE" value="kostur dodat" />
+    <MESSAGE value="Za pull komit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Za pull komit" />
   </component>
 </project>

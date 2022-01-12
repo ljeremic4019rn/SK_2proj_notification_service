@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
-public class ReservationNotification {
+public class ReservationNotif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
