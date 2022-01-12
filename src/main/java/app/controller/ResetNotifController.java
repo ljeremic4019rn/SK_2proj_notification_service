@@ -15,7 +15,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/resetNotif")
+@RequestMapping("/resetnotif")
 public class ResetNotifController {
 
     private ResetNotifService resetNotifService;
@@ -29,7 +29,7 @@ public class ResetNotifController {
         return new ResponseEntity<>(resetNotifService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "Register")
+    @PostMapping(value = "register")
     public ResponseEntity<ResetNotifDto> add(@RequestBody @Valid ResetNotifCreateDto resetNotifCreateDto){
         return new ResponseEntity<>(resetNotifService.add(resetNotifCreateDto), HttpStatus.CREATED);
     }

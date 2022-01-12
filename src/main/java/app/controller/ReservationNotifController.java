@@ -16,7 +16,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/reservationNotif")
+@RequestMapping("/reservationnotif")
 public class ReservationNotifController {
 
     private ReservationNotifService reservationNotifService;
@@ -30,7 +30,7 @@ public class ReservationNotifController {
         return new ResponseEntity<>(reservationNotifService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "Register")
+    @PostMapping(value = "register")
     public ResponseEntity<ReservationNotifDto> add(@RequestBody @Valid ReservationNotifCreateDto reservationNotifCreateDto){
         return new ResponseEntity<>(reservationNotifService.add(reservationNotifCreateDto), HttpStatus.CREATED);
     }

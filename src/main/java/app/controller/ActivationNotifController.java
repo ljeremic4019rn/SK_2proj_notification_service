@@ -13,7 +13,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/activationNotif")
+@RequestMapping("/activationnotif")
 public class ActivationNotifController {
 
     private ActivationNotifService activationNotifService;
@@ -27,7 +27,7 @@ public class ActivationNotifController {
         return new ResponseEntity<>(activationNotifService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "Register")
+    @PostMapping(value = "register")
     public ResponseEntity<ActivationNotifDto> add(@RequestBody @Valid ActivationNotifCreateDto activationNotifCreateDto){
         return new ResponseEntity<>(activationNotifService.add(activationNotifCreateDto), HttpStatus.CREATED);
     }

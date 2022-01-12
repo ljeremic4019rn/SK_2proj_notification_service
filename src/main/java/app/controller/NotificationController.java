@@ -28,7 +28,7 @@ public class NotificationController {
         return new ResponseEntity<>(notificationService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "Register")
+    @PostMapping(value = "register")
     public ResponseEntity<NotificationDto> add(@RequestBody @Valid NotificationCreateDto notificationCreateDto){
         return new ResponseEntity<>(notificationService.add(notificationCreateDto), HttpStatus.CREATED);
     }

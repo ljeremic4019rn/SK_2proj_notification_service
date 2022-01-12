@@ -15,7 +15,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/reminderNotif")
+@RequestMapping("/remindernotif")
 public class ReminderNotifController {
 
     private ReminderNotifService reminderNotifService;
@@ -29,7 +29,7 @@ public class ReminderNotifController {
         return new ResponseEntity<>(reminderNotifService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "Register")
+    @PostMapping(value = "register")
     public ResponseEntity<ReminderNotifDto> add(@RequestBody @Valid ReminderNotifCreateDto reminderNotifCreateDto){
         return new ResponseEntity<>(reminderNotifService.add(reminderNotifCreateDto), HttpStatus.CREATED);
     }
