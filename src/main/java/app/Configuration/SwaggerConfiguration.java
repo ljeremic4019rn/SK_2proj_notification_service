@@ -1,5 +1,6 @@
 package app.Configuration;
 
+import app.controller.NotificationController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -19,8 +20,8 @@ public class SwaggerConfiguration {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
-               // .select().apis(RequestHandlerSelectors.basePackage(AdminController.class.getPackage().getName()))
-               // .build()
+                .select().apis(RequestHandlerSelectors.basePackage(NotificationController.class.getPackage().getName()))
+                .build()
                 .apiInfo(metaData());
     }
 
