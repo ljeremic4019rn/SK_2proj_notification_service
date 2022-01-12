@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodat notificationDto, ReminderNotifDto i ActivationNotifDto" />
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodat datum u notification i preimenovane klase">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/mapper/ActivationNotifMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ActivationNotifMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/mapper/NotificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mapper/NotificationMapper.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641943141376</updated>
       <workItem from="1641943142751" duration="81000" />
-      <workItem from="1641982608704" duration="6690000" />
+      <workItem from="1641982608704" duration="7762000" />
     </task>
     <task id="LOCAL-00001" summary="maven dep added">
       <created>1641983416486</created>
@@ -138,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641994968341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="dodat datum u notification i preimenovane klase">
+      <created>1641995480002</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641995480002</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +174,7 @@
     <MESSAGE value="repo napravljen" />
     <MESSAGE value="rad na dto klasama" />
     <MESSAGE value="dodat notificationDto, ReminderNotifDto i ActivationNotifDto" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodat notificationDto, ReminderNotifDto i ActivationNotifDto" />
+    <MESSAGE value="dodat datum u notification i preimenovane klase" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodat datum u notification i preimenovane klase" />
   </component>
 </project>
