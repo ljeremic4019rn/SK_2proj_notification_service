@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="Za pull komit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodati notif, reminder i activation mapperi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,6 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
-        <entry key="JPA Structure" value="true" />
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
@@ -38,7 +34,6 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
@@ -66,7 +61,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.12330097" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
@@ -79,11 +74,6 @@
       <recent name="app.repository" />
       <recent name="app.dto" />
     </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean" />
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="HotelNotificationServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -104,6 +94,9 @@
       <updated>1641943141376</updated>
       <workItem from="1641943142751" duration="81000" />
       <workItem from="1641982608704" duration="9700000" />
+      <workItem from="1641998554726" duration="59000" />
+      <workItem from="1641998636361" duration="115000" />
+      <workItem from="1641998777910" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="maven dep added">
       <created>1641983416486</created>
@@ -168,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641996172259</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="dodati notif, reminder i activation mapperi">
+      <created>1641998605519</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1641998605519</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +316,7 @@
     <MESSAGE value="dodat notificationDto, ReminderNotifDto i ActivationNotifDto" />
     <MESSAGE value="dodat datum u notification i preimenovane klase" />
     <MESSAGE value="random push" />
-    <option name="LAST_COMMIT_MESSAGE" value="random push" />
+    <MESSAGE value="dodati notif, reminder i activation mapperi" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodati notif, reminder i activation mapperi" />
   </component>
 </project>
