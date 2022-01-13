@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="popravljen ResetNotif">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Configuration/EmailConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/notificationDtos/UserPasswordDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/dto/notificationDtos/VerifyMailDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/MessageBroker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/MessageBroker_old.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/tmp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="swagger minimalno promenjen">
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,11 +79,11 @@
       <recent name="C:\Users\Shus\Programing\IdeaProjects\Year 3\SK-projekat2\SK_2proj_notification_service\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="app.dto.notificationDtos" />
-      <recent name="app.listener" />
       <recent name="app" />
       <recent name="app.service.impl" />
       <recent name="app.service" />
+      <recent name="app.repository" />
+      <recent name="app.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -110,7 +93,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HotelNotificationServiceApp (1)">
+  <component name="RunManager" selected="Application.MessageBroker">
     <configuration name="MessageBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MessageBroker" />
       <module name="notification_service" />
@@ -295,14 +278,7 @@
       <option name="project" value="LOCAL" />
       <updated>1642020998712</updated>
     </task>
-    <task id="LOCAL-00018" summary="popravljen ResetNotif">
-      <created>1642080915564</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1642080915564</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +431,6 @@
     <MESSAGE value="basic struktura controllera" />
     <MESSAGE value="service implementiran" />
     <MESSAGE value="swagger minimalno promenjen" />
-    <MESSAGE value="popravljen ResetNotif" />
-    <option name="LAST_COMMIT_MESSAGE" value="popravljen ResetNotif" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger minimalno promenjen" />
   </component>
 </project>

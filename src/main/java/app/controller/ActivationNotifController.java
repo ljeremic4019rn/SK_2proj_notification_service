@@ -13,7 +13,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/activationnotif")
+@RequestMapping("/activationNotif")
 public class ActivationNotifController {
 
     private ActivationNotifService activationNotifService;

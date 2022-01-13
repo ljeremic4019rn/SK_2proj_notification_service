@@ -1,11 +1,13 @@
 package app.service.impl;
 
 import app.domain.ActivationNotif;
+import app.domain.Notification;
 import app.dto.ActivationNotifCreateDto;
 import app.dto.ActivationNotifDto;
 import app.exception.NotFoundException;
 import app.mapper.ActivationNotifMapper;
 import app.repository.ActivationNotifRepository;
+import app.repository.NotificationRepository;
 import app.service.ActivationNotifService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,16 +26,21 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
 
     private ActivationNotifRepository activationNotifRepository;
     private ActivationNotifMapper activationNotifMapper;
+    private NotificationRepository notificationRepository;
 
     private JmsTemplate jmsTemplate;
     private ObjectMapper objectMapper;
+    private String destinationTestMessage;
 
     public ActivationNotifServiceImpl(ActivationNotifRepository activationNotifRepository, ActivationNotifMapper activationNotifMapper,
-                                      JmsTemplate jmsTemplate, ObjectMapper objectMapper) {
+                                      NotificationRepository notificationRepository,
+                                      JmsTemplate jmsTemplate, ObjectMapper objectMapper, @Value("${destination.testMessage}") String destinationTestMessage) {
         this.activationNotifRepository = activationNotifRepository;
         this.activationNotifMapper = activationNotifMapper;
+        this.notificationRepository = notificationRepository;
         this.jmsTemplate = jmsTemplate;
         this.objectMapper = objectMapper;
+        this.destinationTestMessage = destinationTestMessage;
     }
 
     @Override
@@ -59,6 +66,6 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
 
     @Override
     public void deleteById(Long id) {
-        activationNotifRepository.deleteById((id));
+        activationNotifRepository.deleteById(id);
     }
 }
