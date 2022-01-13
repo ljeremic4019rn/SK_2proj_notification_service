@@ -27,15 +27,13 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
 
     private JmsTemplate jmsTemplate;
     private ObjectMapper objectMapper;
-    private String destinationTestMessage;
 
     public ActivationNotifServiceImpl(ActivationNotifRepository activationNotifRepository, ActivationNotifMapper activationNotifMapper,
-                                      JmsTemplate jmsTemplate, ObjectMapper objectMapper, @Value("${destination.testMessage}") String destinationTestMessage) {
+                                      JmsTemplate jmsTemplate, ObjectMapper objectMapper) {
         this.activationNotifRepository = activationNotifRepository;
         this.activationNotifMapper = activationNotifMapper;
         this.jmsTemplate = jmsTemplate;
         this.objectMapper = objectMapper;
-        this.destinationTestMessage = destinationTestMessage;
     }
 
     @Override
