@@ -1,5 +1,6 @@
 package app.dto;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ActivationNotifCreateDto {
@@ -7,7 +8,7 @@ public class ActivationNotifCreateDto {
     private String clientEmail;
     private String text;
     private String type;
-    private Date creationDate;
+    private LocalDate creationDate;
 
     public String getActivationLink() {
         return activationLink;
@@ -41,11 +42,11 @@ public class ActivationNotifCreateDto {
         this.type = type;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }

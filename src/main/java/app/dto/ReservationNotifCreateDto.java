@@ -2,6 +2,7 @@ package app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ReservationNotifCreateDto {
@@ -9,7 +10,7 @@ public class ReservationNotifCreateDto {
     private String clientEmail;
     private String text;
     private String type;
-    private Date creationDate;
+    private LocalDate creationDate;
 
 
     public String getClientEmail() {
@@ -36,11 +37,11 @@ public class ReservationNotifCreateDto {
         this.type = type;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }

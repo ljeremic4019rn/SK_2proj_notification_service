@@ -2,8 +2,14 @@ package app.listener;
 
 
 
+import app.domain.ActivationNotif;
+import app.domain.Notification;
+import app.domain.NotificationType;
 import app.dto.notificationDtos.VerifyMailDto;
 import app.exception.NotFoundException;
+import app.repository.ActivationNotifRepository;
+import app.repository.NotificationRepository;
+import app.repository.NotificationTypeRepository;
 import app.service.EmailService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,11 +19,18 @@ import org.springframework.stereotype.Component;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.TextMessage;
+import java.sql.Date;
+import java.sql.Time;
+import java.time.Clock;
+import java.time.LocalDate;
 
 @Component
 public class VerifyMailListener {
     private ObjectMapper objectMapper;
     private EmailService emailService;
+    private NotificationRepository notificationRepository;
+    private ActivationNotifRepository activationNotifRepository;
+    private NotificationTypeRepository notificationTypeRepository;
 
     public VerifyMailListener(ObjectMapper objectMapper, EmailService emailService) {
         this.objectMapper = objectMapper;
@@ -32,10 +45,18 @@ public class VerifyMailListener {
 
         //todo kreiraj novu notifikasiju i postavi je na bazu
 
-        System.out.println("Message procitan");
-        System.out.println(verifyMailDto.getName());
-        System.out.println(verifyMailDto.getLastname());
-        System.out.println(verifyMailDto.getEmail());
+        Notification notification = new Notification();
+        notification.setClientEmail(verifyMailDto.getEmail());
+        notification.setText("text main notif");
+        notification.setNotificationType(notificationTypeRepository.findByName("activation")
+                .orElseThrow(() -> new NotFoundException(String
+                        .format("NotificationType with name: %s does not exists.", "activation"))));
+        //notification.setCreationDate(Date.from());
+        notificationRepository.save(notification);
+
+        ActivationNotif activationNotif = new ActivationNotif();
+        //activationNotif.setActivationLink(activationNotifCreateDto.getActivationLink());
+        activationNotif.setNotification(notification);
 
 
 

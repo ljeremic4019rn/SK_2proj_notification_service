@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="uklonejn maper is ActivationNotifServiceImpl">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_2_RELEASE.xml" afterDir="false" />
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="dodat notifikacioni service za prijavljivanje i resetovanje passworda, treba da se doda pravljenje notifikacija prilikom prijema jedne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/notificationDtos/UserPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/notificationDtos/UserPasswordDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/NotificationCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/NotificationCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/NotificationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/NotificationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifCreateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642099267613</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="dodat notifikacioni service za prijavljivanje i resetovanje passworda, treba da se doda pravljenje notifikacija prilikom prijema jedne">
+      <created>1642102119426</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1642102119426</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,6 +470,7 @@
     <MESSAGE value="popravljen ResetNotif" />
     <MESSAGE value="pravljenje notifikacionog servisa" />
     <MESSAGE value="uklonejn maper is ActivationNotifServiceImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="uklonejn maper is ActivationNotifServiceImpl" />
+    <MESSAGE value="dodat notifikacioni service za prijavljivanje i resetovanje passworda, treba da se doda pravljenje notifikacija prilikom prijema jedne" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodat notifikacioni service za prijavljivanje i resetovanje passworda, treba da se doda pravljenje notifikacija prilikom prijema jedne" />
   </component>
 </project>

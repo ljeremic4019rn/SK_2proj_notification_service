@@ -3,6 +3,7 @@ package app.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -15,13 +16,12 @@ public class Notification {
     @ManyToOne
     private NotificationType notificationType;
     @JsonFormat(pattern="dd/MM/yyyy")
-    private Date creationDate;
+    private LocalDate creationDate;
 
     public Notification() {
     }
 
-
-    public Notification( String clientEmail, String text, NotificationType notificationType, Date creationDate) {
+    public Notification(String clientEmail, String text, NotificationType notificationType, LocalDate creationDate) {
         this.clientEmail = clientEmail;
         this.text = text;
         this.notificationType = notificationType;
@@ -60,11 +60,11 @@ public class Notification {
         this.notificationType = notificationType;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }
