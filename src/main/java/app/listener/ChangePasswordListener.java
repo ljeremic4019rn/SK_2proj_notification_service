@@ -33,18 +33,17 @@ public class ChangePasswordListener {
         //todo kreiraj novu notifikasiju i postavi je na bazu
 
 
-
-
         System.out.println("MESSAGE PROCITAN");
         System.out.println(userPasswordDto.getEmail());
         System.out.println(userPasswordDto.getPassword());
 
-        System.out.println("Sending email");
-
-        emailService.sendSimpleMessage("bogdanovicjovan04@gmail.com","test mail", "teraj se u kurac");
 
 
+        String body = "Hello " + userPasswordDto.getName() + " " + userPasswordDto.getLastname() + " to save your new password please click on the given link:" +
+                "http://localhost:8080/api/user/"+ userPasswordDto.getId() + "/saveNewPassword";
+
+
+        emailService.sendSimpleMessage(userPasswordDto.getEmail(),"Password reset save prompt", body);
 
     }
-
 }

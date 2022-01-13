@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="swagger minimalno promenjen">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" afterDir="false" />
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="uklonejn maper is ActivationNotifServiceImpl">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notification_service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/notificationDtos/UserPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/notificationDtos/UserPasswordDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +84,11 @@
       <recent name="C:\Users\Shus\Programing\IdeaProjects\Year 3\SK-projekat2\SK_2proj_notification_service\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.dto.notificationDtos" />
+      <recent name="app.listener" />
       <recent name="app" />
       <recent name="app.service.impl" />
       <recent name="app.service" />
-      <recent name="app.repository" />
-      <recent name="app.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,7 +98,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MessageBroker">
+  <component name="RunManager" selected="Spring Boot.HotelNotificationServiceApp (1)">
     <configuration name="MessageBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MessageBroker" />
       <module name="notification_service" />
@@ -278,7 +283,28 @@
       <option name="project" value="LOCAL" />
       <updated>1642020998712</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="popravljen ResetNotif">
+      <created>1642080915564</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642080915564</updated>
+    </task>
+    <task id="LOCAL-00019" summary="pravljenje notifikacionog servisa">
+      <created>1642099018234</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1642099018234</updated>
+    </task>
+    <task id="LOCAL-00020" summary="uklonejn maper is ActivationNotifServiceImpl">
+      <created>1642099267613</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1642099267613</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +457,9 @@
     <MESSAGE value="basic struktura controllera" />
     <MESSAGE value="service implementiran" />
     <MESSAGE value="swagger minimalno promenjen" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger minimalno promenjen" />
+    <MESSAGE value="popravljen ResetNotif" />
+    <MESSAGE value="pravljenje notifikacionog servisa" />
+    <MESSAGE value="uklonejn maper is ActivationNotifServiceImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="uklonejn maper is ActivationNotifServiceImpl" />
   </component>
 </project>

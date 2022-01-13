@@ -37,9 +37,12 @@ public class VerifyMailListener {
         System.out.println(verifyMailDto.getLastname());
         System.out.println(verifyMailDto.getEmail());
 
-        String text = "Hello" + verifyMailDto.getName() + " " + verifyMailDto.getLastname() + " to complete your registration please click on the given link: ";
 
-        emailService.sendSimpleMessage("","test mail", "teraj se u kurac");
+
+        String body = "Hello " + verifyMailDto.getName() + " " + verifyMailDto.getLastname() + " to complete your registration please click on the given link:" +
+                "http://localhost:8080/api/user/verifyMail/" + verifyMailDto.getEmail();
+
+        emailService.sendSimpleMessage(verifyMailDto.getEmail(), "Complete your registration", body);
 
 
     }

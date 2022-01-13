@@ -4,8 +4,26 @@ public class UserPasswordDto {
     private Long id;
     private String password;
     private String email;
+    private String name;
+    private String lastname;
 
     public UserPasswordDto() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public Long getId() {
