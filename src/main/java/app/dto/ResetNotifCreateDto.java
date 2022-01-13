@@ -6,29 +6,18 @@ import java.util.Date;
 
 public class ResetNotifCreateDto {
 
-    private String newEmail;
-    private String newPassword;
+    private String resetLink;
     private String clientEmail;
     private String text;
     private String type;
     private Date creationDate;
 
-
-
-    public String getNewEmail() {
-        return newEmail;
+    public String getResetLink() {
+        return resetLink;
     }
 
-    public void setNewEmail(String newEmail) {
-        this.newEmail = newEmail;
-    }
-
-    public String getNewPassword() {
-        return newPassword;
-    }
-
-    public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
+    public void setResetLink(String resetLink) {
+        this.resetLink = resetLink;
     }
 
     public String getClientEmail() {

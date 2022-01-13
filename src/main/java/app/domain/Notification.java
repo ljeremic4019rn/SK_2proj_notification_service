@@ -1,5 +1,7 @@
 package app.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -12,6 +14,7 @@ public class Notification {
     private String text;
     @ManyToOne
     private NotificationType notificationType;
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date creationDate;
 
     public Notification() {

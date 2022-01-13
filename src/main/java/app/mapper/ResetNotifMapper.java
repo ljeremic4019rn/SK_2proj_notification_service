@@ -26,8 +26,7 @@ public class ResetNotifMapper {
     public ResetNotifDto resetNotifToResetNotifDto(ResetNotif resetNotif){
         ResetNotifDto resetNotifDto = new ResetNotifDto();
         resetNotifDto.setId(resetNotif.getId());
-        resetNotifDto.setNewEmail(resetNotif.getNewEmail());
-        resetNotifDto.setNewPassword(resetNotif.getNewPassword());
+        resetNotifDto.setResetLink(resetNotif.getResetLink());
         resetNotifDto.setNotificationDto(notificationMapper.notificationToNotificationDto(resetNotif.getNotification()));
         return resetNotifDto;
     }
@@ -43,8 +42,7 @@ public class ResetNotifMapper {
         notificationRepository.save(notification);
 
         ResetNotif resetNotif = new ResetNotif();
-        resetNotif.setNewEmail(resetNotifCreateDto.getNewEmail());
-        resetNotif.setNewPassword(resetNotifCreateDto.getNewPassword());
+        resetNotif.setResetLink(resetNotifCreateDto.getResetLink());
         resetNotif.setNotification(notification);
 
         return resetNotif;
