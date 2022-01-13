@@ -45,24 +45,10 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
     }
 
     @Override
-    public void add(ActivationNotifCreateDto activationNotifCreateDto) {
-//        ActivationNotif activationNotif = activationNotifMapper.activationNotifCreateDtoToActivationNotif(activationNotifCreateDto);
-//        activationNotifRepository.save(activationNotif);
-//        return activationNotifMapper.activationNotifToActivationNotifDto(activationNotif);
-        System.out.println("saljemo poruku");
-
-
-        ActivationNotifDto activationNotifDto  = new ActivationNotifDto();
-        activationNotifDto.setActivationLink("link link");
-        activationNotifDto.setId(12L);
-        activationNotifDto.setNotificationDto(null);
-
-
-        try {
-            jmsTemplate.convertAndSend(destinationTestMessage, objectMapper.writeValueAsString(activationNotifDto));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
+    public ActivationNotifDto add(ActivationNotifCreateDto activationNotifCreateDto) {
+        ActivationNotif activationNotif = activationNotifMapper.activationNotifCreateDtoToActivationNotif(activationNotifCreateDto);
+        activationNotifRepository.save(activationNotif);
+        return activationNotifMapper.activationNotifToActivationNotifDto(activationNotif);
 
     }
 
