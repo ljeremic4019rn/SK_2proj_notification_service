@@ -16,7 +16,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/reservationnotif")
+@RequestMapping("/reservationNotif")
 public class ReservationNotifController {
 
     private ReservationNotifService reservationNotifService;

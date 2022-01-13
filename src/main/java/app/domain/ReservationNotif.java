@@ -16,6 +16,13 @@ public class ReservationNotif {
     private Notification notification;
 
 
+    public ReservationNotif() {
+    }
+
+    public ReservationNotif(Notification notification) {
+        this.notification = notification;
+    }
+
     public Long getId() {
         return id;
     }

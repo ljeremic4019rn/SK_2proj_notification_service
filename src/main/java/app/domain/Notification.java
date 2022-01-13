@@ -14,14 +14,14 @@ public class Notification {
     private String text;
     @ManyToOne
     private NotificationType notificationType;
-    @JsonFormat(pattern="dd-MM-yyyy")
+    @JsonFormat(pattern="dd/MM/yyyy")
     private Date creationDate;
 
     public Notification() {
     }
 
-    public Notification(Long id, String clientEmail, String text, NotificationType notificationType, Date creationDate) {
-        this.id = id;
+
+    public Notification( String clientEmail, String text, NotificationType notificationType, Date creationDate) {
         this.clientEmail = clientEmail;
         this.text = text;
         this.notificationType = notificationType;

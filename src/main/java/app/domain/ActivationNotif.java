@@ -11,6 +11,14 @@ public class ActivationNotif {
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 
+    public ActivationNotif() {
+    }
+
+    public ActivationNotif(String activationLink, Notification notification) {
+        this.activationLink = activationLink;
+        this.notification = notification;
+    }
+
     public Long getId() {
         return id;
     }

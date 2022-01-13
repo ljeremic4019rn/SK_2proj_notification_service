@@ -15,6 +15,13 @@ public class NotificationType {
     private Long id;
     private String name;
 
+    public NotificationType() {
+    }
+
+    public NotificationType(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

@@ -15,7 +15,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/remindernotif")
+@RequestMapping("/reminderNotif")
 public class ReminderNotifController {
 
     private ReminderNotifService reminderNotifService;

@@ -15,7 +15,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/resetnotif")
+@RequestMapping("/resetNotif")
 public class ResetNotifController {
 
     private ResetNotifService resetNotifService;

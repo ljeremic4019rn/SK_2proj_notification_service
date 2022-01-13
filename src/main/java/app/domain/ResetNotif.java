@@ -11,6 +11,14 @@ public class ResetNotif {
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 
+    public ResetNotif() {
+    }
+
+    public ResetNotif(String resetLink, Notification notification) {
+        this.resetLink = resetLink;
+        this.notification = notification;
+    }
+
     public Long getId() {
         return id;
     }
