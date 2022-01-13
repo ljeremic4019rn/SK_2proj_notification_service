@@ -9,7 +9,7 @@ public interface ActivationNotifService {
 
     Page<ActivationNotifDto> findAll(Pageable pageable);
 
-    void add(ActivationNotifCreateDto activationNotifCreateDto);
+    ActivationNotifDto add(ActivationNotifCreateDto activationNotifCreateDto);
 
     ActivationNotifDto findById(Long id);
 
