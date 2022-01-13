@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResetNotifDto {
     private Long id;
-    private String newEmail;
-    private String newPassword;
+    private String resetLink;
     @JsonProperty("notification")
     private NotificationDto notificationDto;
 
@@ -17,20 +16,12 @@ public class ResetNotifDto {
         this.id = id;
     }
 
-    public String getNewEmail() {
-        return newEmail;
+    public String getResetLink() {
+        return resetLink;
     }
 
-    public void setNewEmail(String newEmail) {
-        this.newEmail = newEmail;
-    }
-
-    public String getNewPassword() {
-        return newPassword;
-    }
-
-    public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
+    public void setResetLink(String resetLink) {
+        this.resetLink = resetLink;
     }
 
     public NotificationDto getNotificationDto() {

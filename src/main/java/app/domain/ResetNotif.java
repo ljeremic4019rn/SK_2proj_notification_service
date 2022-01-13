@@ -7,9 +7,7 @@ public class ResetNotif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String newEmail;
-    private String newPassword;
-
+    private String resetLink;
     @OneToOne(cascade = CascadeType.REMOVE)
     private Notification notification;
 
@@ -21,20 +19,12 @@ public class ResetNotif {
         this.id = id;
     }
 
-    public String getNewEmail() {
-        return newEmail;
+    public String getResetLink() {
+        return resetLink;
     }
 
-    public void setNewEmail(String newEmail) {
-        this.newEmail = newEmail;
-    }
-
-    public String getNewPassword() {
-        return newPassword;
-    }
-
-    public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
+    public void setResetLink(String resetLink) {
+        this.resetLink = resetLink;
     }
 
     public Notification getNotification() {
