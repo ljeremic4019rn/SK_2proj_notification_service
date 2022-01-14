@@ -4,41 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="promenjen date u  LocalDate">
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="proba sa tokenom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/NotificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ReminderNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ReminderNotifController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ReservationNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ReservationNotifController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ResetNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ResetNotifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ActivationNotifCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/NotificationCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/NotificationCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReminderNotifCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ReservationNotifCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/ResetNotifCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/listener/ChangePasswordListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/listener/VerifyMailListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mapper/ActivationNotifMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ActivationNotifMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mapper/ReminderNotifMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ReminderNotifMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mapper/ReservationNotifMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ReservationNotifMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mapper/ResetNotifMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mapper/ResetNotifMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ActivationNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ActivationNotifRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ReminderNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReminderNotifRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ReservationNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ReservationNotifRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/ResetNotifRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/ResetNotifRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/runner/TestDataRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/runner/TestDataRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/ActivationNotifService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/ActivationNotifService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/ReminderNotifService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/ReminderNotifService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/ReservationNotifService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/ReservationNotifService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/ResetNotifService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/ResetNotifService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ActivationNotifServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/NotificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ReminderNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ReminderNotifServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ReservationNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ReservationNotifServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/impl/ResetNotifServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/impl/ResetNotifServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
