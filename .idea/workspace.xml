@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="proba sa tokenom">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ActivationNotifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ReminderNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ReminderNotifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ReservationNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ReservationNotifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/ResetNotifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ResetNotifController.java" afterDir="false" />
-    </list>
+    <list default="true" id="de56b2fb-31e8-43ac-b151-940ec288585a" name="Changes" comment="promenjen date u  LocalDate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
