@@ -48,7 +48,7 @@ public class ReservationNotifController {
     }
 
     @GetMapping("/sort/email_{email}")
-    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    @CheckSecurity(roles = {"ROLE_ADMIN","ROLE_MANAGER","ROLE_CLIENT"})
     public ResponseEntity<Page<ReservationNotifDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
         return new ResponseEntity<>(reservationNotifService.findByEmail(email, pageable), HttpStatus.OK);
     }

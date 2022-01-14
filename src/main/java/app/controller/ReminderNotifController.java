@@ -47,7 +47,7 @@ public class ReminderNotifController {
     }
 
     @GetMapping("/sort/email_{email}")
-    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    @CheckSecurity(roles = {"ROLE_ADMIN","ROLE_MANAGER","ROLE_CLIENT"})
     public ResponseEntity<Page<ReminderNotifDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
         return new ResponseEntity<>(reminderNotifService.findByEmail(email, pageable), HttpStatus.OK);
     }
