@@ -13,12 +13,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -58,5 +63,40 @@ public class ActivationNotifServiceImpl implements ActivationNotifService {
     @Override
     public void deleteById(Long id) {
         activationNotifRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<ActivationNotifDto> findByEmail(String email, Pageable pageable) {
+        List<ActivationNotif> activationNotifs = activationNotifRepository.findAll();
+        ArrayList<ActivationNotifDto> SelectedActivationNotifDtos = new ArrayList<>();
+
+        for(ActivationNotif an : activationNotifs) {
+            if(an.getNotification().getClientEmail().equals(email)){
+                SelectedActivationNotifDtos.add(activationNotifMapper.activationNotifToActivationNotifDto(an));
+            }
+        }
+
+        Page<ActivationNotifDto> ActivationNotificationDtoPage = new PageImpl<>(SelectedActivationNotifDtos);
+        return ActivationNotificationDtoPage;
+    }
+
+    @Override
+    public Page<ActivationNotifDto> findBetweenDates(String startDate, String endDate, Pageable pageable) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate date1Formatted = LocalDate.parse(startDate, dateTimeFormatter);
+        LocalDate date2Formatted = LocalDate.parse(endDate, dateTimeFormatter);
+
+        List<ActivationNotif> activationNotifs = activationNotifRepository.findAll();
+        ArrayList<ActivationNotifDto> SelectedActivationNotifDtos = new ArrayList<>();
+
+        for(ActivationNotif an: activationNotifs){
+            LocalDate notifDate = an.getNotification().getCreationDate();
+            if(notifDate.isAfter(date1Formatted) && notifDate.isBefore(date2Formatted)){
+                SelectedActivationNotifDtos.add(activationNotifMapper.activationNotifToActivationNotifDto(an));
+            }
+        }
+
+        Page<ActivationNotifDto> notificationDtoPage = new PageImpl<>(SelectedActivationNotifDtos);
+        return notificationDtoPage;
     }
 }

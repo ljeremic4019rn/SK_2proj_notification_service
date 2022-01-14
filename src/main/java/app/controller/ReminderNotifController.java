@@ -1,9 +1,6 @@
 package app.controller;
 
-import app.dto.NotificationCreateDto;
-import app.dto.NotificationDto;
-import app.dto.ReminderNotifCreateDto;
-import app.dto.ReminderNotifDto;
+import app.dto.*;
 import app.service.ReminderNotifService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -44,4 +41,16 @@ public class ReminderNotifController {
         reminderNotifService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/sort/email_{email}")
+    public ResponseEntity<Page<ReminderNotifDto>> getNotificationsByEmail(@PathVariable("email") String email, Pageable pageable) {
+        return new ResponseEntity<>(reminderNotifService.findByEmail(email, pageable), HttpStatus.OK);
+    }
+
+    @GetMapping("/sort/between_{startDate}&{endDate}")
+    // @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ReminderNotifDto>> getNotificationsBetweenDates(@PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
+        return new ResponseEntity<>(reminderNotifService.findBetweenDates(startDate, endDate, pageable), HttpStatus.OK);
+    }
+
 }

@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 @Profile({"default"})
 @Component
@@ -43,14 +44,10 @@ public class TestDataRunner implements CommandLineRunner {
         notificationTypeRepository.save(reservation);
         notificationTypeRepository.save(reset);
 
-        Notification notification1 = new Notification("adjelic@gmail.com","Zdravo Andrija", activation,
-                new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2021"));
-        Notification notification2 = new Notification("ljeremic@gmail.com","Zdravo Luka", reminder,
-                new SimpleDateFormat("dd/MM/yyyy").parse("02/01/2021"));
-        Notification notification3 = new Notification("nardbutina@gmail.com","Zdravo Nenade", reservation,
-                new SimpleDateFormat("dd/MM/yyyy").parse("02/01/2021"));
-        Notification notification4 = new Notification("pdjelic@gmail.com","Zdravo Petre", reset,
-                new SimpleDateFormat("dd/MM/yyyy").parse("02/01/2021"));
+        Notification notification1 = new Notification("adjelic@gmail.com","Zdravo Andrija", activation);
+        Notification notification2 = new Notification("ljeremic@gmail.com","Zdravo Luka", reminder);
+        Notification notification3 = new Notification("nardbutina@gmail.com","Zdravo Nenade", reservation);
+        Notification notification4 = new Notification("pdjelic@gmail.com","Zdravo Petre", reset);
 
         notificationRepository.save(notification1);
         notificationRepository.save(notification2);

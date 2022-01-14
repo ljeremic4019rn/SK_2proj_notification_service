@@ -1,5 +1,6 @@
 package app.service;
 
+import app.dto.ReservationNotifDto;
 import app.dto.ResetNotifCreateDto;
 import app.dto.ResetNotifDto;
 import org.springframework.data.domain.Page;
@@ -13,4 +14,10 @@ public interface ResetNotifService {
     ResetNotifDto findById(Long id);
 
     void deleteById(Long id);
+
+
+    Page<ResetNotifDto> findByEmail(String email, Pageable pageable);
+
+    Page<ResetNotifDto> findBetweenDates(String startDate, String endDate, Pageable pageable);
+
 }

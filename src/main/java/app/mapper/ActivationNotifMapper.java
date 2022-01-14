@@ -10,6 +10,8 @@ import app.repository.NotificationRepository;
 import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+
 @Component
 public class ActivationNotifMapper {
 
@@ -39,7 +41,7 @@ public class ActivationNotifMapper {
         notification.setNotificationType(notificationTypeRepository.findByName(activationNotifCreateDto.getType())
                 .orElseThrow(() -> new NotFoundException(String
                         .format("NotificationType with name: %s does not exists.", activationNotifCreateDto.getType()))));
-        notification.setCreationDate(activationNotifCreateDto.getCreationDate());
+        notification.setCreationDate(LocalDate.now());
         notificationRepository.save(notification);
 
         ActivationNotif activationNotif = new ActivationNotif();

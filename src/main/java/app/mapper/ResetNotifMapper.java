@@ -10,6 +10,8 @@ import app.repository.NotificationRepository;
 import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+
 @Component
 public class ResetNotifMapper {
 
@@ -38,7 +40,7 @@ public class ResetNotifMapper {
         notification.setNotificationType(notificationTypeRepository.findByName(resetNotifCreateDto.getType())
                 .orElseThrow(() -> new NotFoundException(String
                         .format("NotificationType with name: %s does not exists.", resetNotifCreateDto.getType()))));
-        notification.setCreationDate(resetNotifCreateDto.getCreationDate());
+        notification.setCreationDate(LocalDate.now());
         notificationRepository.save(notification);
 
         ResetNotif resetNotif = new ResetNotif();

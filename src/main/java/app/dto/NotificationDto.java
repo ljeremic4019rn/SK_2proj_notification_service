@@ -2,6 +2,7 @@ package app.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class NotificationDto {
@@ -10,7 +11,7 @@ public class NotificationDto {
     private String text;
     @JsonProperty("type")
     private NotificationTypeDto notificationTypeDto;
-    private Date creationDate;
+    private LocalDate creationDate;
 
 
     public Long getId() {
@@ -45,11 +46,11 @@ public class NotificationDto {
         this.notificationTypeDto = notificationTypeDto;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }
