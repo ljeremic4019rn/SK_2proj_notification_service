@@ -1,10 +1,7 @@
 package app.controller;
 
 
-import app.dto.ReminderNotifCreateDto;
-import app.dto.ReminderNotifDto;
-import app.dto.ReservationNotifCreateDto;
-import app.dto.ReservationNotifDto;
+import app.dto.*;
 import app.service.ReservationNotifService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -45,4 +42,16 @@ public class ReservationNotifController {
         reservationNotifService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/sort/email_{email}")
+    public ResponseEntity<Page<ReservationNotifDto>> getNotificationsByEmail(@PathVariable("email") String email, Pageable pageable) {
+        return new ResponseEntity<>(reservationNotifService.findByEmail(email, pageable), HttpStatus.OK);
+    }
+
+    @GetMapping("/sort/between_{startDate}&{endDate}")
+    // @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ReservationNotifDto>> getNotificationsBetweenDates(@PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
+        return new ResponseEntity<>(reservationNotifService.findBetweenDates(startDate, endDate, pageable), HttpStatus.OK);
+    }
+
 }

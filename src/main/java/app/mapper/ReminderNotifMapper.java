@@ -9,6 +9,8 @@ import app.repository.NotificationRepository;
 import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+
 @Component
 public class ReminderNotifMapper {
 
@@ -38,7 +40,7 @@ public class ReminderNotifMapper {
         notification.setNotificationType(notificationTypeRepository.findByName(reminderNotifCreateDto.getType())
                 .orElseThrow(() -> new NotFoundException(String
                         .format("NotificationType with name: %s does not exists.", reminderNotifCreateDto.getType()))));
-        notification.setCreationDate(reminderNotifCreateDto.getCreationDate());
+        notification.setCreationDate(LocalDate.now());
         notificationRepository.save(notification);
 
         ReminderNotif reminderNotif = new ReminderNotif();

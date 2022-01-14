@@ -2,6 +2,7 @@ package app.controller;
 
 import app.dto.ActivationNotifCreateDto;
 import app.dto.ActivationNotifDto;
+import app.security.CheckSecurity;
 import app.service.ActivationNotifService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,8 +31,6 @@ public class ActivationNotifController {
     @PostMapping(value = "register")
     public ResponseEntity<ActivationNotifDto> add(@RequestBody @Valid ActivationNotifCreateDto activationNotifCreateDto){
         return new ResponseEntity<>(activationNotifService.add(activationNotifCreateDto), HttpStatus.CREATED);
-//        activationNotifService.add(activationNotifCreateDto);
-//        return null;
     }
 
     @GetMapping("/{id}")
@@ -44,5 +43,18 @@ public class ActivationNotifController {
         activationNotifService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+
+    @GetMapping("/sort/email_{email}")
+    public ResponseEntity<Page<ActivationNotifDto>> getNotificationsByEmail(@PathVariable("email") String email, Pageable pageable) {
+        return new ResponseEntity<>(activationNotifService.findByEmail(email, pageable), HttpStatus.OK);
+    }
+
+    @GetMapping("/sort/between_{startDate}&{endDate}")
+   // @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ActivationNotifDto>> getNotificationsBetweenDates(@PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
+        return new ResponseEntity<>(activationNotifService.findBetweenDates(startDate, endDate, pageable), HttpStatus.OK);
+    }
+
 
 }

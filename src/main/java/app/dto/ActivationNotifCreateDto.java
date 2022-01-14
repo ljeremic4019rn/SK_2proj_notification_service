@@ -8,7 +8,7 @@ public class ActivationNotifCreateDto {
     private String clientEmail;
     private String text;
     private String type;
-    private LocalDate creationDate;
+//    private LocalDate creationDate;
 
     public String getActivationLink() {
         return activationLink;
@@ -41,12 +41,12 @@ public class ActivationNotifCreateDto {
     public void setType(String type) {
         this.type = type;
     }
-
-    public LocalDate getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(LocalDate creationDate) {
-        this.creationDate = creationDate;
-    }
+//
+//    public LocalDate getCreationDate() {
+//        return creationDate;
+//    }
+//
+//    public void setCreationDate(LocalDate creationDate) {
+//        this.creationDate = creationDate;
+//    }
 }

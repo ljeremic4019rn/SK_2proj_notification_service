@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @Entity
@@ -15,17 +16,20 @@ public class Notification {
     private String text;
     @ManyToOne
     private NotificationType notificationType;
-    @JsonFormat(pattern="dd/MM/yyyy")
+    @JsonFormat(pattern="dd-MM-yyyy")
     private LocalDate creationDate;
+
+
 
     public Notification() {
     }
 
-    public Notification(String clientEmail, String text, NotificationType notificationType, LocalDate creationDate) {
+    public Notification(String clientEmail, String text, NotificationType notificationType) {
+
         this.clientEmail = clientEmail;
         this.text = text;
         this.notificationType = notificationType;
-        this.creationDate = creationDate;
+        this.creationDate = LocalDate.now();
     }
 
     public Long getId() {
@@ -67,4 +71,6 @@ public class Notification {
     public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
+
+
 }

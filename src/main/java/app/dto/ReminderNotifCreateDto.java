@@ -8,7 +8,7 @@ public class ReminderNotifCreateDto {
     private String clientEmail;
     private String text;
     private String type;
-    private LocalDate creationDate;
+//    private LocalDate creationDate;
 
     public String getTimeUntilReservation() {
         return timeUntilReservation;
@@ -41,12 +41,12 @@ public class ReminderNotifCreateDto {
     public void setType(String type) {
         this.type = type;
     }
-
-    public LocalDate getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(LocalDate creationDate) {
-        this.creationDate = creationDate;
-    }
+//
+//    public LocalDate getCreationDate() {
+//        return creationDate;
+//    }
+//
+//    public void setCreationDate(LocalDate creationDate) {
+//        this.creationDate = creationDate;
+//    }
 }

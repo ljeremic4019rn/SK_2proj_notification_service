@@ -1,5 +1,6 @@
 package app.service;
 
+import app.dto.ActivationNotifDto;
 import app.dto.NotificationCreateDto;
 import app.dto.NotificationDto;
 import org.springframework.data.domain.Page;
@@ -14,5 +15,8 @@ public interface NotificationService {
     NotificationDto findById(Long id);
 
     void deleteById(Long id);
+
+    Page<NotificationDto> findByType(String type, Pageable pageable);
+
 
 }

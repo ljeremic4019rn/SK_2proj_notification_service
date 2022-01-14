@@ -11,8 +11,8 @@ public class NotificationCreateDto {
     private String text;
     @NotBlank
     private String type;
-    @NotBlank
-    private LocalDate creationDate;
+//    @NotBlank
+//    private LocalDate creationDate;
 
 
     public String getClientEmail() {
@@ -39,11 +39,11 @@ public class NotificationCreateDto {
         this.type = type;
     }
 
-    public LocalDate getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(LocalDate creationDate) {
-        this.creationDate = creationDate;
-    }
+//    public LocalDate getCreationDate() {
+//        return creationDate;
+//    }
+//
+//    public void setCreationDate(LocalDate creationDate) {
+//        this.creationDate = creationDate;
+//    }
 }

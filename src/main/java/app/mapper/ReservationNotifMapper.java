@@ -9,6 +9,8 @@ import app.repository.NotificationRepository;
 import app.repository.NotificationTypeRepository;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+
 @Component
 public class ReservationNotifMapper {
 
@@ -37,7 +39,7 @@ public class ReservationNotifMapper {
         notification.setNotificationType(notificationTypeRepository.findByName(reservationNotifCreateDto.getType())
                 .orElseThrow(() -> new NotFoundException(String
                         .format("NotificationType with name: %s does not exists.", reservationNotifCreateDto.getType()))));
-        notification.setCreationDate(reservationNotifCreateDto.getCreationDate());
+        notification.setCreationDate(LocalDate.now());
         notificationRepository.save(notification);
 
         ReservationNotif reservationNotif = new ReservationNotif();

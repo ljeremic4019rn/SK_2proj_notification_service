@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.dto.ActivationNotifDto;
 import app.dto.NotificationCreateDto;
 import app.dto.NotificationDto;
 import app.security.CheckSecurity;
@@ -43,4 +44,11 @@ public class NotificationController {
         notificationService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/filter/type-{type}")
+    // @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<NotificationDto>> getNotificationsByType(@PathVariable("type") String type, Pageable pageable) {
+        return new ResponseEntity<>(notificationService.findByType(type, pageable), HttpStatus.OK);
+    }
+
 }

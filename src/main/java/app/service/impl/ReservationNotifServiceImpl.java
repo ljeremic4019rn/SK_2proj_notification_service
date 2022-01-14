@@ -1,6 +1,8 @@
 package app.service.impl;
 
+import app.domain.ActivationNotif;
 import app.domain.ReservationNotif;
+import app.dto.ActivationNotifDto;
 import app.dto.ReservationNotifCreateDto;
 import app.dto.ReservationNotifDto;
 import app.exception.NotFoundException;
@@ -8,9 +10,15 @@ import app.mapper.ReservationNotifMapper;
 import app.repository.ReservationNotifRepository;
 import app.service.ReservationNotifService;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -47,5 +55,40 @@ public class ReservationNotifServiceImpl implements ReservationNotifService {
     @Override
     public void deleteById(Long id) {
         reservationNotifRepository.deleteById((id));
+    }
+
+    @Override
+    public Page<ReservationNotifDto> findByEmail(String email, Pageable pageable) {
+        List<ReservationNotif> reservationNotifs = reservationNotifRepository.findAll();
+        ArrayList<ReservationNotifDto> SelectedReservationNotifDtos = new ArrayList<>();
+
+        for(ReservationNotif an : reservationNotifs) {
+            if(an.getNotification().getClientEmail().equals(email)){
+                SelectedReservationNotifDtos.add(reservationNotifMapper.reservationNotifToReservationNotifDto(an));
+            }
+        }
+
+        Page<ReservationNotifDto> ActivationNotificationDtoPage = new PageImpl<>(SelectedReservationNotifDtos);
+        return ActivationNotificationDtoPage;
+    }
+
+    @Override
+    public Page<ReservationNotifDto> findBetweenDates(String startDate, String endDate, Pageable pageable) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate parsedStartDate = LocalDate.parse(startDate, dateTimeFormatter);
+        LocalDate parsedEndDate = LocalDate.parse(endDate, dateTimeFormatter);
+
+        List<ReservationNotif> reservationNotifs = reservationNotifRepository.findAll();
+        ArrayList<ReservationNotifDto> SelectedReservationNotifDtos = new ArrayList<>();
+
+        for(ReservationNotif an: reservationNotifs){
+            LocalDate notifDate = an.getNotification().getCreationDate();
+            if(notifDate.isAfter(parsedStartDate) && notifDate.isBefore(parsedEndDate)){
+                SelectedReservationNotifDtos.add(reservationNotifMapper.reservationNotifToReservationNotifDto(an));
+            }
+        }
+
+        Page<ReservationNotifDto> notificationDtoPage = new PageImpl<>(SelectedReservationNotifDtos);
+        return notificationDtoPage;
     }
 }

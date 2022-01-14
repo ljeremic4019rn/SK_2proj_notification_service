@@ -14,4 +14,9 @@ public interface ActivationNotifService {
     ActivationNotifDto findById(Long id);
 
     void deleteById(Long id);
+
+    Page<ActivationNotifDto> findByEmail(String email, Pageable pageable);
+
+    Page<ActivationNotifDto> findBetweenDates(String startDate, String endDate, Pageable pageable);
+
 }
