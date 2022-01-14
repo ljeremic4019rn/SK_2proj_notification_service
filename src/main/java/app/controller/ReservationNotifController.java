@@ -2,6 +2,7 @@ package app.controller;
 
 
 import app.dto.*;
+import app.security.CheckSecurity;
 import app.service.ReservationNotifService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,34 +24,38 @@ public class ReservationNotifController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ReservationNotifDto>> findAll(@ApiIgnore Pageable pageable){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ReservationNotifDto>> findAll(@RequestHeader("Authorization") String authorization, @ApiIgnore Pageable pageable){
         return new ResponseEntity<>(reservationNotifService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "register")
-    public ResponseEntity<ReservationNotifDto> add(@RequestBody @Valid ReservationNotifCreateDto reservationNotifCreateDto){
-        return new ResponseEntity<>(reservationNotifService.add(reservationNotifCreateDto), HttpStatus.CREATED);
-    }
+//    @PostMapping(value = "add")
+//    public ResponseEntity<ReservationNotifDto> add(@RequestBody @Valid ReservationNotifCreateDto reservationNotifCreateDto){
+//        return new ResponseEntity<>(reservationNotifService.add(reservationNotifCreateDto), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ReservationNotifDto> findById(@PathVariable("id") Long id){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<ReservationNotifDto> findById(@RequestHeader("Authorization") String authorization, @PathVariable("id") Long id){
         return new ResponseEntity<>(reservationNotifService.findById(id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable("id") Long id){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<?> deleteById(@RequestHeader("Authorization") String authorization, @PathVariable("id") Long id){
         reservationNotifService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/sort/email_{email}")
-    public ResponseEntity<Page<ReservationNotifDto>> getNotificationsByEmail(@PathVariable("email") String email, Pageable pageable) {
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ReservationNotifDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
         return new ResponseEntity<>(reservationNotifService.findByEmail(email, pageable), HttpStatus.OK);
     }
 
     @GetMapping("/sort/between_{startDate}&{endDate}")
-    // @CheckSecurity(roles = {"ROLE_ADMIN"})
-    public ResponseEntity<Page<ReservationNotifDto>> getNotificationsBetweenDates(@PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ReservationNotifDto>> getNotificationsBetweenDates(@RequestHeader("Authorization") String authorization, @PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
         return new ResponseEntity<>(reservationNotifService.findBetweenDates(startDate, endDate, pageable), HttpStatus.OK);
     }
 

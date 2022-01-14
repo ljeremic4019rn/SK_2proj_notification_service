@@ -25,29 +25,32 @@ public class NotificationController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<NotificationDto>> findAll(@ApiIgnore Pageable pageable){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<NotificationDto>> findAll(@RequestHeader("Authorization") String authorization, @ApiIgnore Pageable pageable){
         return new ResponseEntity<>(notificationService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "register")
-    public ResponseEntity<NotificationDto> add(@RequestBody @Valid NotificationCreateDto notificationCreateDto){
-        return new ResponseEntity<>(notificationService.add(notificationCreateDto), HttpStatus.CREATED);
-    }
+//    @PostMapping(value = "add")
+//    public ResponseEntity<NotificationDto> add(@RequestBody @Valid NotificationCreateDto notificationCreateDto){
+//        return new ResponseEntity<>(notificationService.add(notificationCreateDto), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<NotificationDto> findById(@PathVariable("id") Long id){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<NotificationDto> findById(@RequestHeader("Authorization") String authorization, @PathVariable("id") Long id){
         return new ResponseEntity<>(notificationService.findById(id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable("id") Long id){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<?> deleteById(@RequestHeader("Authorization") String authorization, @PathVariable("id") Long id){
         notificationService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/filter/type-{type}")
-    // @CheckSecurity(roles = {"ROLE_ADMIN"})
-    public ResponseEntity<Page<NotificationDto>> getNotificationsByType(@PathVariable("type") String type, Pageable pageable) {
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<NotificationDto>> getNotificationsByType(@RequestHeader("Authorization") String authorization, @PathVariable("type") String type, Pageable pageable) {
         return new ResponseEntity<>(notificationService.findByType(type, pageable), HttpStatus.OK);
     }
 

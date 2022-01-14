@@ -29,31 +29,35 @@ public class ActivationNotifController {
         return new ResponseEntity<>(activationNotifService.findAll(pageable), HttpStatus.OK);
     }
 
-    @PostMapping(value = "register")
-    public ResponseEntity<ActivationNotifDto> add(@RequestBody @Valid ActivationNotifCreateDto activationNotifCreateDto){
-        return new ResponseEntity<>(activationNotifService.add(activationNotifCreateDto), HttpStatus.CREATED);
-    }
+//    @PostMapping(value = "add")
+//    @CheckSecurity(roles = {"ROLE_ADMIN"})
+//    public ResponseEntity<ActivationNotifDto> add(@RequestHeader("Authorization") String authorization, @RequestBody @Valid ActivationNotifCreateDto activationNotifCreateDto){
+//        return new ResponseEntity<>(activationNotifService.add(activationNotifCreateDto), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ActivationNotifDto> findById(@PathVariable("id") Long id){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<ActivationNotifDto> findById(@RequestHeader("Authorization") String authorization, @PathVariable("id") Long id){
         return new ResponseEntity<>(activationNotifService.findById(id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable("id") Long id){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<?> deleteById(@RequestHeader("Authorization") String authorization, @PathVariable("id") Long id){
         activationNotifService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
     @GetMapping("/sort/email_{email}")
-    public ResponseEntity<Page<ActivationNotifDto>> getNotificationsByEmail(@PathVariable("email") String email, Pageable pageable) {
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ActivationNotifDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
         return new ResponseEntity<>(activationNotifService.findByEmail(email, pageable), HttpStatus.OK);
     }
 
     @GetMapping("/sort/between_{startDate}&{endDate}")
-   // @CheckSecurity(roles = {"ROLE_ADMIN"})
-    public ResponseEntity<Page<ActivationNotifDto>> getNotificationsBetweenDates(@PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ActivationNotifDto>> getNotificationsBetweenDates(@RequestHeader("Authorization") String authorization, @PathVariable("startDate") String startDate, @PathVariable("endDate") String endDate, Pageable pageable) {
         return new ResponseEntity<>(activationNotifService.findBetweenDates(startDate, endDate, pageable), HttpStatus.OK);
     }
 
