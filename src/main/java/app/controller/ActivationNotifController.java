@@ -23,7 +23,8 @@ public class ActivationNotifController {
         this.activationNotifService = activationNotifService;
     }
 
-    @GetMapping
+    @GetMapping    //todo SAMO ADMIN SME DA VIDI SVE DODAJ CHECKER
+
     public ResponseEntity<Page<ActivationNotifDto>> findAll(@ApiIgnore Pageable pageable){
         return new ResponseEntity<>(activationNotifService.findAll(pageable), HttpStatus.OK);
     }
