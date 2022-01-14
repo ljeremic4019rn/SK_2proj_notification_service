@@ -50,7 +50,7 @@ public class ActivationNotifController {
 
 
     @GetMapping("/sort/email_{email}")
-    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    @CheckSecurity(roles = {"ROLE_ADMIN","ROLE_MANAGER","ROLE_CLIENT"})
     public ResponseEntity<Page<ActivationNotifDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
         return new ResponseEntity<>(activationNotifService.findByEmail(email, pageable), HttpStatus.OK);
     }
