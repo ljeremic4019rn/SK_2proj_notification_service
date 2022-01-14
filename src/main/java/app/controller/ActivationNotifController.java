@@ -2,6 +2,7 @@ package app.controller;
 
 import app.dto.ActivationNotifCreateDto;
 import app.dto.ActivationNotifDto;
+import app.security.CheckSecurity;
 import app.service.ActivationNotifService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,7 +24,8 @@ public class ActivationNotifController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ActivationNotifDto>> findAll(@ApiIgnore Pageable pageable){
+    @CheckSecurity(roles = {"ROLE_ADMIN"})
+    public ResponseEntity<Page<ActivationNotifDto>> findAll(@RequestHeader("Authorization") String authorization, @ApiIgnore Pageable pageable){
         return new ResponseEntity<>(activationNotifService.findAll(pageable), HttpStatus.OK);
     }
 
