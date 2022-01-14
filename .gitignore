@@ -16,7 +16,7 @@ target/
 ### IntelliJ IDEA ###
 
 *.iws
-
+*/workspace.xml
 *.ipr
 */target/**
 ### NetBeans ###
