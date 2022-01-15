@@ -44,10 +44,10 @@ public class TestDataRunner implements CommandLineRunner {
         notificationTypeRepository.save(reservation);
         notificationTypeRepository.save(reset);
 
-        Notification notification1 = new Notification("adjelic@gmail.com","Zdravo Andrija", activation);
-        Notification notification2 = new Notification("ljeremic@gmail.com","Zdravo Luka", reminder);
-        Notification notification3 = new Notification("nardbutina@gmail.com","Zdravo Nenade", reservation);
-        Notification notification4 = new Notification("pdjelic@gmail.com","Zdravo Petre", reset);
+        Notification notification1 = new Notification("narbutina@gmail.com","Zdravo Andrija", activation);
+        Notification notification2 = new Notification("narbutina@gmail.com","Zdravo Luka", reminder);
+        Notification notification3 = new Notification("narbutina@gmail.com","Zdravo Nenade", reservation);
+        Notification notification4 = new Notification("narbutina@gmail.com","Zdravo Petre", reset);
 
         notificationRepository.save(notification1);
         notificationRepository.save(notification2);

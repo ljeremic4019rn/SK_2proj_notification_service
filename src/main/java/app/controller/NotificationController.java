@@ -1,6 +1,7 @@
 package app.controller;
 
 import app.dto.ActivationNotifDto;
+import app.dto.CustomNotificationDto;
 import app.dto.NotificationCreateDto;
 import app.dto.NotificationDto;
 import app.security.CheckSecurity;
@@ -54,4 +55,9 @@ public class NotificationController {
         return new ResponseEntity<>(notificationService.findByType(type, pageable), HttpStatus.OK);
     }
 
+    @GetMapping("/sort/email-{email}")
+    @CheckSecurity(roles = {"ROLE_ADMIN","ROLE_MANAGER","ROLE_CLIENT"})
+    public ResponseEntity<Page<CustomNotificationDto>> getNotificationByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
+        return new ResponseEntity<>(notificationService.findNotificationsByName(email, pageable), HttpStatus.OK);
+    }
 }

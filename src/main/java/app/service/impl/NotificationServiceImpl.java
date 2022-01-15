@@ -2,12 +2,17 @@ package app.service.impl;
 
 import app.domain.ActivationNotif;
 import app.domain.Notification;
+import app.domain.ResetNotif;
 import app.dto.ActivationNotifDto;
+import app.dto.CustomNotificationDto;
 import app.dto.NotificationCreateDto;
 import app.dto.NotificationDto;
 import app.exception.NotFoundException;
+import app.mapper.CustomNotificationMapper;
 import app.mapper.NotificationMapper;
+import app.repository.ActivationNotifRepository;
 import app.repository.NotificationRepository;
+import app.repository.ResetNotifRepository;
 import app.service.NotificationService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -24,10 +29,17 @@ public class NotificationServiceImpl implements NotificationService {
 
     private NotificationRepository notificationRepository;
     private NotificationMapper notificationMapper;
+    private ActivationNotifRepository activationNotifRepository;
+    private ResetNotifRepository resetNotifRepository;
+    private CustomNotificationMapper customNotificationMapper;
 
-    public NotificationServiceImpl(NotificationRepository notificationRepository, NotificationMapper notificationMapper) {
+    public NotificationServiceImpl(NotificationRepository notificationRepository, NotificationMapper notificationMapper,
+                                   ActivationNotifRepository activationNotifRepository, ResetNotifRepository resetNotifRepository, CustomNotificationMapper customNotificationMapper) {
         this.notificationRepository = notificationRepository;
         this.notificationMapper = notificationMapper;
+        this.activationNotifRepository = activationNotifRepository;
+        this.resetNotifRepository = resetNotifRepository;
+        this.customNotificationMapper = customNotificationMapper;
     }
 
     @Override
@@ -72,6 +84,36 @@ public class NotificationServiceImpl implements NotificationService {
         return notificationDtoPage;
     }
 
+    @Override
+    public Page<CustomNotificationDto> findNotificationsByName(String email, Pageable pageable) {
 
+        System.out.println("HELOOOOOOOOOOOOOOOOOOOOOOOO");
+        List<CustomNotificationDto> customNotificationDtoList = new ArrayList<>();
 
+        List<ActivationNotif> activationNotifs = activationNotifRepository.findActivationNotifsByNotification_ClientEmail(email);
+//        if (activationNotifs.isEmpty()){
+//            System.out.println("YEEEEEES EMPTYYYYY");
+//        }
+        for (ActivationNotif a:activationNotifs) {
+//            System.out.println(a.getActivationLink());
+                customNotificationDtoList.add(customNotificationMapper.activationNotifToCustomNotificationDto(a));
+        }
+
+        List<ResetNotif> resetNotifs = resetNotifRepository.findResetNotifsByNotification_ClientEmail(email);
+        for (ResetNotif r:resetNotifs) {
+            customNotificationDtoList.add(customNotificationMapper.resetNotifToCustomNotificationDto(r));
+        }
+        for (CustomNotificationDto d:customNotificationDtoList) {
+            System.out.println(d.getEmail()+" "+d.getText());
+        }
+
+//
+//        for (CustomNotificationDto c:customNotificationDtoList) {
+//            System.out.println(String.format("{%s %s %s}", c.getEmail(),c.getText(),c.getType()));
+//        }
+        Page<CustomNotificationDto> customNotificationDtoPage = new PageImpl<>(customNotificationDtoList);
+        return customNotificationDtoPage;
+//        return notificationRepository.findAll(pageable)
+//                .map(notificationMapper::notificationToNotificationDto);
+    }
 }
