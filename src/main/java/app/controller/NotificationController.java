@@ -49,11 +49,11 @@ public class NotificationController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/sort/email_{email}")
-    @CheckSecurity(roles = {"ROLE_ADMIN","ROLE_MANAGER","ROLE_CLIENT"})
-    public ResponseEntity<Page<NotificationDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
-        return new ResponseEntity<>(notificationService.findByEmail(email, pageable), HttpStatus.OK);
-    }
+//    @GetMapping("/sort/email_{email}")
+//    @CheckSecurity(roles = {"ROLE_ADMIN","ROLE_MANAGER","ROLE_CLIENT"})
+//    public ResponseEntity<Page<NotificationDto>> getNotificationsByEmail(@RequestHeader("Authorization") String authorization, @PathVariable("email") String email, Pageable pageable) {
+//        return new ResponseEntity<>(notificationService.findByEmail(email, pageable), HttpStatus.OK);
+//    }
 
     @GetMapping("/filter/type-{type}")
     @CheckSecurity(roles = {"ROLE_ADMIN"})
