@@ -18,5 +18,7 @@ public interface NotificationService {
 
     Page<NotificationDto> findByType(String type, Pageable pageable);
 
+    Page<NotificationDto> findByEmail(String email, Pageable pageable);
+
 
 }

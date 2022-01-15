@@ -72,6 +72,19 @@ public class NotificationServiceImpl implements NotificationService {
         return notificationDtoPage;
     }
 
+    @Override
+    public Page<NotificationDto> findByEmail(String email, Pageable pageable) {
+        List<Notification> activationNotifs = notificationRepository.findAll();
+        ArrayList<NotificationDto> SelectedNotifDtos = new ArrayList<>();
 
+        for(Notification an : activationNotifs) {
+            if(an.getClientEmail().equals(email)){
+                SelectedNotifDtos.add(notificationMapper.notificationToNotificationDto(an));
+            }
+        }
+
+        Page<NotificationDto> notificationDtoPage = new PageImpl<>(SelectedNotifDtos);
+        return notificationDtoPage;
+    }
 
 }
